@@ -7,13 +7,13 @@ export const extractData = (pokemonData) => {
     const id = pokemonData.id;
     const name = pokemonData.name;
     const img = pokemonData.sprites.front_default;
+    const cry = pokemonData.cries.latest;
     const types =[];
     pokemonData.types.forEach(typeItem => {
         types.push(typeItem.type.name);
     });
-    console.log(id);
-    console.log(name);
-    return {id, name, img, types}
+    console.log(cry);
+    return {id, name, img, cry, types};
 }
 
 export const showData = (data) => {
@@ -22,6 +22,7 @@ export const showData = (data) => {
         <dd><img src="${data.img}" alt=""></dd>
         <dd>ID: ${data.id}</dd>
         <dt>Types: ${data.types.join(",")}</dd>
+        <audio id="pokemon-cry" src="${data.cry}" autoplay></audio>
         </dl>`
     document.querySelector("#js-result").innerHTML = htmlData;
 }
