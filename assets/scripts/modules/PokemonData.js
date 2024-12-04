@@ -29,9 +29,11 @@ export const showData = (data) => {
         <dd><img src="${data.img}" alt=""></dd>
         <dd>ID: ${data.id}</dd>
         <dt>Types: ${data.types.join(",")}</dd>
-        <dt>Titles: ${data.gameTitles.join(",")}</dd>
-        <dt class="gameImages">${data.gameImageFilePaths.join("")}</dt></dd>
+        <dt>Appeared in:</dd>
         <audio id="pokemon-cry" src="${data.cry}" autoplay></audio>
         </dl>`
     document.querySelector("#js-result").innerHTML = htmlData;
+
+    const gameImages = `${data.gameImageFilePaths.join("")}</dd>`
+    document.querySelector("#js-images").innerHTML = gameImages;
 }

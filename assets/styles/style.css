@@ -69,6 +69,7 @@ input {
 .form {
   display: flex;
   gap: 10px;
+  margin-bottom: 20px;
 }
 
 .result {
@@ -83,4 +84,13 @@ input {
 .result dt,
 .result dd {
   margin: 0;
+}
+
+.images {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  width: 500px;
 }
